@@ -1,0 +1,64 @@
+<!--
+Eine kleine Seite (nut HTML, CSS und Javascript) anlegen.
+Sollte haben:
+- Javascript `fetch`,
+- eine `table` in die dynamisch Werte geladen werden, z.b. nach einer Auswahl,
+- und Bootstrap 4 Design,
+
+fertige Seite ins Repo laden.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Live Weather App</a>
+        </nav>
+
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome!</h1>
+            <p class="lead">Here you can get the current weather displayed!</p>
+            <hr class="my-4">
+            <p>
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Current Temperature (°C)</th>
+                            <th>Current Weather Description</th>
+                            <th>Current Wind Speed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td style="min-width: 150px;">
+                            <select id="location_selector" class="custom-select" style="min-width: 150px; width:100%" onchange="change_location();">
+                                <option value="" disabled selected>Select City</option>
+                                <option id="London" value="London"> London</option>
+                                <option id="Vienna" value="Vienna"> Vienna</option>
+                                <option id="Osaka" value="Osaka"> Osaka</option>
+                                <option id="Stockholm" value="Stockholm"> Stockholm</option>
+                                <option id="New York" value="New York"> New York</option>
+                            </select>
+
+                        </td>
+                        <td id="selected_location"></td>
+                        <td id="selected_location_desc"></td>
+                        <td id="selected_location_wind"></td>
+
+                    </tbody>
+                </table>
+            </p>
+        </div>
+
+        <script type="text/javascript" src="hw_1_2_weather.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
