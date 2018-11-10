@@ -12,6 +12,6 @@ function change_coin(){
     fetch(url)
         .then((resp) => resp.json())
             .then(function(response){
-                coin_exchange_rate.innerHTML = +response["weather"];
+                coin_exchange_rate.innerHTML = +response["EUR"];
     });
 }
